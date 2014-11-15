@@ -1,0 +1,23 @@
+master:
+    build: .
+    volumes:
+        - /mnt:/data
+    ports:
+        - "8083:8083"
+        - "8086:8086"
+        - "8090:8090"
+        - "8099:8099"
+    environment:
+        - FORCE_HOSTNAME=${FORCE_HOSTNAME:-influxdb-master}
+
+seed:
+    build: .
+    volumes:
+        - /mnt:/data
+    ports:
+        - "8083:8083"
+        - "8086:8086"
+        - "8090:8090"
+        - "8099:8099"
+    environment:
+        - SEEDS=${SEEDS:-influxdb-master}
