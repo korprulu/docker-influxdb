@@ -81,7 +81,7 @@ dir  = "/data/raft"
 
 debug = false
 
-# election-timeout = "1s"
+election-timeout = "1s"
 
 [storage]
 
