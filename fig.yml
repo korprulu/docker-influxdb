@@ -1,5 +1,5 @@
 master:
-    build: .
+    image: korprulu/influxdb
     volumes:
         - /mnt:/data
     ports:
@@ -11,7 +11,7 @@ master:
         - FORCE_HOSTNAME=${FORCE_HOSTNAME:-influxdb-master}
 
 seed:
-    build: .
+    image: korprulu/influxdb
     volumes:
         - /mnt:/data
     ports:

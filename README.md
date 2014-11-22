@@ -1,18 +1,5 @@
-tutum-docker-influxdb
-=====================
-InfluxDB image
 
-
-Usage
------
-
-To create the image `tutum/influxdb`, execute the following command on tutum-docker-influxdb folder:
-
-    docker build -t tutum/influxdb .
-
-You can now push new image to the registry:
-    
-    docker push tutum/influxdb
+InfluxDB image based on [tutum-docker-influxdb](https://registry.hub.docker.com/u/tutum/influxdb/)
 
 
 Running your InfluxDB image

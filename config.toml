@@ -13,7 +13,7 @@ bind-address = "0.0.0.0"
 # to track the number of instances running and the versions which
 # is very helpful for us.
 # Change this option to true to disable reporting.
-reporting-disabled = true
+reporting-disabled = false
 
 [logging]
 # logging level can be one of "fine", "debug", "info", "warn" or "error"
@@ -118,7 +118,7 @@ max-open-files = 1000
 # LRU cache size, LRU is used by rocksdb to store contents of the
 # uncompressed sstables. You can use `m` or `g` prefix for megabytes
 # and gigabytes, respectively.
-lru-cache-size = "1g"
+lru-cache-size = "200m"
 
 [cluster]
 # A comma separated list of servers to seed
