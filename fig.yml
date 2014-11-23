@@ -1,4 +1,7 @@
-master:
+# Dynamic environment variable value example:
+#   FORCE_HOSTNAME="$(echo $HOSTNAME)" fig up -d
+#
+influxdb:
     image: korprulu/influxdb
     volumes:
         - /mnt:/data
@@ -8,16 +11,5 @@ master:
         - "8090:8090"
         - "8099:8099"
     environment:
-        - FORCE_HOSTNAME=${FORCE_HOSTNAME:-influxdb-master}
-
-seed:
-    image: korprulu/influxdb
-    volumes:
-        - /mnt:/data
-    ports:
-        - "8083:8083"
-        - "8086:8086"
-        - "8090:8090"
-        - "8099:8099"
-    environment:
-        - SEEDS=${SEEDS:-influxdb-master}
+        FORCE_HOSTNAME:
+        SEEDS:
