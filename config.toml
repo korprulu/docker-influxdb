@@ -104,8 +104,7 @@ point-batch-size = 100
 
 # The number of points to batch in memory before writing them to leveldb. Lowering this number will
 # reduce the memory usage, but will result in slower writes.
-# NOTES: 5000000 will cause `out of memory` in gcp standard-4 type instance (4vcpu, 15G memory)
-write-batch-size = 1000000
+write-batch-size = 5000000
 
 # The server will check this often for shards that have expired that should be cleared.
 retention-sweep-period = "10m"
@@ -119,7 +118,7 @@ max-open-files = 1000
 # LRU cache size, LRU is used by rocksdb to store contents of the
 # uncompressed sstables. You can use `m` or `g` prefix for megabytes
 # and gigabytes, respectively.
-lru-cache-size = "10m"
+lru-cache-size = "200m"
 
 [cluster]
 # A comma separated list of servers to seed
